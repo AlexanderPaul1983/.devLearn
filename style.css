@@ -1,0 +1,143 @@
+body{
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+
+.div-oben{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.welcome_div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.login_div{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: 20px;
+}
+
+.log_in{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.log_in:hover{
+    text-decoration: underline;
+    color: rgb(177, 57, 175);
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.main-div{
+    display: flex;
+    flex-direction: row;
+    background-image: url('computers.webp');
+    background-size: cover;
+    background-position: center;
+}
+.link{
+    text-decoration: none;
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px 50px 8px 50px;
+    border-radius: 0px 0px 10px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 10px;
+    color: rgb(250, 249, 249);
+    background-color: rgb(177, 57, 175);
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.link:hover{
+    background-color: rgb(170, 24, 165);
+    box-shadow: 2px 2px;
+}
+
+.main-container{
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    justify-content: end;
+    
+}
+
+img{
+    min-height: 200;
+    max-height: 350px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0px 20px 50px 0px;
+}
+.bewertungen-div{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+}
+.bewertungen_content{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid black;
+}
+.img{
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+    box-shadow: 2px 2px;
+    margin: 10px;
+}
+@media(max-width:768px) {
+    .bewertungen_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+    }
+}
+
+.infos{
+    margin: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    width: 100%;
+    background-color: rgb(30, 28, 28);
+}
+.footer-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+    height: 300px;
+}
