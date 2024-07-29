@@ -30,7 +30,7 @@ body{
     text-decoration: none;
     color: black;
     font-size: larger;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Rubik", sans-serif;
     
 }
 .log_in:hover{
@@ -39,7 +39,7 @@ body{
 }
 
 h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Rubik", sans-serif;
     
 }
 
@@ -49,6 +49,7 @@ h1{
     background-image: url('computers.webp');
     background-size: cover;
     background-position: center;
+    
 }
 .link{
     text-decoration: none;
@@ -56,7 +57,7 @@ h1{
     text-align: center;
     padding: 8px 50px 8px 50px;
     border-radius: 0px 0px 10px 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 10px;
     color: rgb(250, 249, 249);
     background-color: rgb(177, 57, 175);
@@ -64,11 +65,13 @@ h1{
     margin-right: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: transform 500 ease-in;
 }
 
 .link:hover{
     background-color: rgb(170, 24, 165);
     box-shadow: 2px 2px;
+    transform: scale(1.1);
 }
 
 .main-container{
@@ -77,6 +80,10 @@ h1{
     display: flex;
     justify-content: end;
     
+}
+.bewertungen_p{
+    font-size: larger;
+    font-family: "Rubik", sans-serif;
 }
 
 img{
@@ -102,29 +109,32 @@ header{
     justify-content: baseline;
     align-items: center;
     margin: 10px;
-    border: 1px solid black;
+    
 }
 .img{
     border: 2px solid;
     height: 100px;
-    width: 100px;
-    border-radius: 20%;
+    width: 70%;
+    border-radius: 10px;
     box-shadow: 2px 2px;
     margin: 10px;
 }
-@media(max-width:768px) {
+@media(max-width:668px) {
     .bewertungen_content{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 10px;
-        padding: 40px;
+        padding: 10px;
+        font-size: small;
+        border: 1px solid black;
     }
 }
 
+
 .infos{
     margin: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Rubik", sans-serif;
     line-height: 30px;
     display: flex;
     flex-direction: column;
@@ -135,6 +145,21 @@ header{
     background-color: rgb(30, 28, 28);
     display: flex;
     justify-content: center;
+}
+.infos_p{
+    font-family: "Rubik", sans-serif;
+    color: rgba(0, 0, 0, 0.70);
+    padding: 60px;
+}
+@media (max-width: 768px) {
+    .infos_p{
+        padding: 10px;
+        font-size: x-small;
+    }
+    h1{
+        font-size: medium;
+    }
+    
 }
 .footer-div{
     width: 100%;
