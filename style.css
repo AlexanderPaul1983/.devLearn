@@ -40,7 +40,6 @@ body{
 
 h1{
     font-family: "Rubik", sans-serif;
-    
 }
 
 .main-div{
@@ -49,7 +48,6 @@ h1{
     background-image: url('computers.webp');
     background-size: cover;
     background-position: center;
-    
 }
 .link{
     text-decoration: none;
@@ -65,7 +63,7 @@ h1{
     margin-right: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-    transition: transform 500 ease-in;
+    transition: transform 400ms ease-in;
 }
 
 .link:hover{
