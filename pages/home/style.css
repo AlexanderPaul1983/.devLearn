@@ -45,7 +45,7 @@ h1{
 .main-div{
     display: flex;
     flex-direction: row;
-    background-image: url('computers.webp');
+    background-image: url('/images/computers.webp');
     background-size: cover;
     background-position: center;
 }

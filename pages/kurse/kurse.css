@@ -103,10 +103,10 @@ h1{
     border-radius: 8px;
     background: linear-gradient(0deg, rgb(60, 246, 60) 20%, green 80%);
     font-family: "Rubik", sans-serif;
-    
+    color: antiquewhite;
 }
 .btn_on_kurse:hover{
-    background: green;
+    background: rgb(0, 93, 0);
     
 }
 
