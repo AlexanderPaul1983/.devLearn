@@ -157,6 +157,12 @@ header{
     h1{
         font-size: medium;
     }
+    .logo{
+        width: 45px;
+    }
+    .log_in{
+        font-size: small;
+    }
     
 }
 .footer-div{

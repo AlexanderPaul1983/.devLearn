@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="50" fill="black"/>
+<ellipse cx="50" cy="50.4778" rx="47" ry="46.4778" fill="#D8D0D0"/>
+<rect width="3.07894" height="15.279" transform="matrix(0.626307 0.779577 -0.752057 0.659098 28.0532 39.1669)" fill="#070707"/>
+<rect width="5.09781" height="16.4057" transform="matrix(0.737393 -0.675464 0.643064 0.765812 13.3108 52.0622)" fill="#0F0F0F"/>
+<ellipse cx="31" cy="59.3556" rx="2" ry="2.08889" fill="#0C0C0C"/>
+<rect x="44" y="33.2444" width="3" height="28.2" fill="black"/>
+<ellipse cx="38.5" cy="52.5667" rx="5.5" ry="8.87778" fill="black"/>
+<ellipse cx="39" cy="54.1333" rx="1" ry="2.08889" fill="#D9D9D9"/>
+<rect x="52" y="33.2444" width="7" height="28.2" fill="#0720FF"/>
+<rect x="59" y="53.0889" width="12" height="8.35556" fill="#040EFF"/>
+<rect width="17.4296" height="5.09826" transform="matrix(0.644615 0.764508 -0.736008 0.676973 77.6127 39.5111)" fill="#0C0C0C"/>
+<rect width="16.2706" height="5.13992" transform="matrix(0.777162 -0.629301 0.596033 0.80296 73 59.3108)" fill="#0C0C0C"/>
+</svg>

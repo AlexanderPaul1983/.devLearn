@@ -99,16 +99,13 @@ h1{
 .btn_on_kurse{
     width: 100%;
     padding: 7px;
+    text-shadow: 1px 1px 1px;
     cursor: pointer;
     border-radius: 8px;
     background: linear-gradient(0deg, rgb(60, 246, 60) 20%, green 80%);
     font-family: "Rubik", sans-serif;
-    
+
 }
 .btn_on_kurse:hover{
-    background: green;
-    
+    background: green;    
 }
-
-
-
