@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="individual.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Anmelde-Formular zur Programmier-Nachhilfe (individualer Kurs)</h1>
+    <form>
+        <fieldset>
+            <legend>Allgemeine Informationen</legend>
+            <input type="text" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" required><br><br>
+            <input type="text" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" required><br><br>
+            <input type="date" placeholder="Alter" size="30" name="alter" required><br><br>
+            <input type="text" placeholder="Name des Erziehungsberechtigten" size="30"  disabled><br><br>
+            <input type="email" placeholder="E-Mail" size="30" required name="email"><br><br>
+            <input type="text" placeholder="Telefon" size="30" name="telefon"><br><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Vorkenntnisse</legend>
+            <label for="html">HTML</label>
+            <input type="checkbox" name="html" id="html">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="html" id="css">
+            <label for="javascript">JAVASCRIPT</label>
+            <input type="checkbox" name="html" id="javascript">
+            <label for="java">JAVA</label>
+            <input type="checkbox" name="html" id="java"><br><br>
+            <input type="text" name="andere" id="andere" placeholder="Andere (bitte angeben)"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Mein Programmierlevel</legend>
+            <label for="anfaenger">Anfänger</label>
+            <input type="checkbox" name="anfaenger" id="anfaenger"><br>
+            <label for="fort">Fortgeschrittener Anfänger</label>
+            <input type="checkbox" name="fort" id="fort"><br>
+            <label for="Mittelstufe">Mittelstufe</label>
+            <input type="checkbox" name="mittel" id="Mittelstufe"><br>
+            <label for="fortgeschritten">Fortgeschritten</label>
+            <input type="checkbox" name="fortgeschritten" id="fortgeschritten"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Unterrichtsorganisation</legend>
+            <label for="sequenz">Wie oft wünschen Sie sich Nachhilfestunden?</label><br>
+            <input type="number" name="sequenz" id="sequenze" min="1" required><br><br><br>
+            <label for="browsers">Bevorzugte Tage für den Unterricht</label><br>
+            <input list="browsers" name="browser"><br>
+            <datalist id="browsers">
+              <option value="Monday">
+              <option value="Tuesday">
+              <option value="Wednesday">
+              <option value="Thursday">
+              <option value="Friday">
+              <option value="Saturday">
+              <option value="Sunday">
+            </datalist><br>
+            <input type="submit" value="Add" class="add_btn"><br><br>
+            
+            <label for="stunden">Bevorzugte Stunden für den Unterricht</label><br>
+            <input list="stunden" name="stunden"><br>
+            <datalist id="stunden">
+              <option value="Zwischen 9:00 und 12:00 Uhr">
+              <option value="Zwischen 12:00 und 15:00 Uhr">
+              <option value="Zwischen 15:00 und 18:00 Uhr">
+            </datalist><br>
+            <input type="submit" value="Add" class="add_btn">
+        </fieldset>
+    </form>
+</body>
+</html>

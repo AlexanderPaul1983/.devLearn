@@ -1,0 +1,25 @@
+h1{
+    color: rgb(246, 245, 247);
+}
+body{
+    background: rgb(133,21,213);
+    background: linear-gradient(120deg, rgba(133,21,213,1) 55%, rgba(252,70,107,1) 94%);
+    font-family: "Rubik", sans-serif;
+}
+legend{
+    color: aliceblue;
+}
+input{
+    background-color: rgb(192, 191, 191);
+    border-radius: 8px;
+    color: antiquewhite;
+    font-size: large;
+}
+.add_btn{
+    color: black;
+    padding: 4px;
+    font-size: medium;
+    border: 2px solid;
+    box-shadow: 2px 2px 2px;
+
+}
