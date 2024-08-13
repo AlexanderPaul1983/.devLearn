@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Anmelde-Formular zur Programmier-Nachhilfe (individualer Kurs)</h1>
+    <h1>Anmelde-Formular zur Programmier-Nachhilfe (individual Kurs)</h1>
     <form>
         <fieldset>
             <legend>Allgemeine Informationen</legend>
@@ -49,18 +49,17 @@
             <label for="sequenz">Wie oft wünschen Sie sich Nachhilfestunden?</label><br>
             <input type="number" name="sequenz" id="sequenze" min="1" required><br><br><br>
             <label for="browsers">Bevorzugte Tage für den Unterricht</label><br>
-            <input list="browsers" name="browser"><br>
+            <input list="browsers" name="browser" id="dayInput"><br>
             <datalist id="browsers">
-              <option value="Monday">
-              <option value="Tuesday">
-              <option value="Wednesday">
-              <option value="Thursday">
-              <option value="Friday">
-              <option value="Saturday">
-              <option value="Sunday">
+              <option value="Montag">
+              <option value="Dienstag">
+              <option value="Mittwoch">
+              <option value="Donnerstag">
+              <option value="Freitag">
+              <option value="Samstag">
             </datalist><br>
-            <input type="submit" value="Add" class="add_btn"><br><br>
-            
+            <input type="submit" value="Add" class="add_btn" id="addButton"><br><br>
+            <ul id="dayList"></ul>            
             <label for="stunden">Bevorzugte Stunden für den Unterricht</label><br>
             <input list="stunden" name="stunden"><br>
             <datalist id="stunden">
@@ -71,5 +70,10 @@
             <input type="submit" value="Add" class="add_btn">
         </fieldset>
     </form>
+    <h2>Wie geht´s weiter?</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, corporis et asperiores deserunt beatae id, nihil magnam, ipsum est iusto eius accusamus iste aliquam! Doloribus incidunt deleniti dolores nam sed.</p>
+    <button class="anfrage_senden_btn">Anfrage senden</button>
+
+    <script src="individual.js"></script>
 </body>
 </html>

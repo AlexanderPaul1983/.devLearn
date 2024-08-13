@@ -2,18 +2,20 @@ h1{
     color: rgb(246, 245, 247);
 }
 body{
-    background: rgb(133,21,213);
-    background: linear-gradient(120deg, rgba(133,21,213,1) 55%, rgba(252,70,107,1) 94%);
+    background: rgb(3, 3, 3);
+    background: linear-gradient(120deg, rgb(49, 3, 82) 55%, rgb(19, 35, 175) 94%);
     font-family: "Rubik", sans-serif;
 }
 legend{
-    color: aliceblue;
+    color: rgb(245, 246, 248);
+    font-size: 25px;
 }
 input{
     background-color: rgb(192, 191, 191);
     border-radius: 8px;
     color: antiquewhite;
     font-size: large;
+    padding: 4px;
 }
 .add_btn{
     color: black;
@@ -21,5 +23,25 @@ input{
     font-size: medium;
     border: 2px solid;
     box-shadow: 2px 2px 2px;
-
+    cursor: pointer;
+}
+.add_btn:hover{
+    background-color: rgb(7, 7, 7);
+    color: antiquewhite;
+}
+label{
+    color: antiquewhite;
+}
+    
+.anfrage_senden_btn{
+    font-family: "Rubik", sans-serif;
+    font-size: larger;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.anfrage_senden_btn:hover{
+    background-color: rgb(7, 7, 7);
+    color: antiquewhite;
 }
