@@ -10,9 +10,12 @@ document.getElementById('addButton').addEventListener('click', function(event) {
     // Überprüfen, ob der Wert nicht leer ist und noch nicht in der Liste steht
     if(day !== "" && !isDayInList(day)) {
         addDayToList(day);
-        dayInput.value = ""; // Eingabefeld leeren
+        days.push(day);
+        dayInput.value = ""; 
     }
 });
+
+let days = [];
 
 function isDayInList(day) {
     let dayListItems = document.querySelectorAll('#dayList li');
@@ -42,9 +45,12 @@ addButton.addEventListener('click', function(event){
 
     if(inputValue !== "" && !isStundeInList(inputValue)){
         addStundeToList(inputValue);
+        stundenList.push(stundenListElement);
         input.value = '';
     }
 });
+
+let stundenList = [];
 
 function addStundeToList(inputValue){
     let li = document.createElement('li');
@@ -75,5 +81,28 @@ function isStundeInList(inputValue) {
         }
     }
     return false;
+}
+
+function sendMail(){
+    let params = 
+        {vorname: document.getElementById('vorname').value,
+        nachname: document.getElementById('nachname').value,
+        alter: document.getElementById('alter').value,
+        name_des_erziehungsberechtigten: document.getElementById('name_des_erziehungsberechtigten').value,
+        email: document.getElementById('email').value,
+        telefon: document.getElementById('telefon').value,
+        html: document.getElementById('html').value,
+        css: document.getElementById('css').value,
+        javascript: document.getElementById('javascript').value,
+        java: document.getElementById('java').value,
+        andere_vorkenntnisse: document.getElementById('andere_vorkenntnisse').value,
+        anfaenger: document.getElementById('anfaenger').value,
+        fortgeschritter_anfaenger: document.getElementById('fortgeschritter_anfaenger').value,
+        mittelstufe: document.getElementById('mittelstuffe').value,
+        fortgeschritten: document.getElementById('fortgeschritten').value,
+        days: days,
+        stundenListe: stundenList};
+
+    emailjs.send()
 }
 

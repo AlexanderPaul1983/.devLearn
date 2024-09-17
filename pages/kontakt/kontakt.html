@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="kontakt.css">
+    <script src="kontakt.js" defer></script>
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7LW7uSTv5BGRk7boO",
+      });
+   })();
+</script>
     <title>Document</title>
 </head>
 <body>
+    <div class="kontakt-daten-div">
+        <h4>Kontakt</h4>
+        <p class="p_kontakt">Isarstrasse 3a</p>
+        <p class="p_kontakt">83026 Rosenheim</p>
+        <p class="p_kontakt">Deutschland</p>
+        <p>Tel.: 0157/56 72 15 20</p>
+        <p>Email.: .devlearn@gmx.de</p>
+    </div>
+    <br><br><br>
+    
+    
+    <div>
+        <h1>Nachricht schreiben</h1>
+    
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="lastname">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="message">Nachricht:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea><br><br>
+    
+            <button onclick="sendMail()">Senden</button>
+    
+    </div>
+
+
+
+ 
     
 </body>
 </html>

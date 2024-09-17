@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 50px;
+}
+h4, p{
+    font-size: larger;
+}
+input{
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

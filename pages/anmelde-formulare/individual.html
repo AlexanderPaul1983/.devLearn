@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="individual.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7LW7uSTv5BGRk7boO",
+      });
+   })();
+</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -14,12 +24,12 @@
     <form>
         <fieldset>
             <legend>Allgemeine Informationen</legend>
-            <input type="text" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" required><br><br>
-            <input type="text" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" required><br><br>
-            <input type="date" placeholder="Alter" size="30" name="alter" required><br><br>
-            <input type="text" placeholder="Name des Erziehungsberechtigten" size="30"  disabled><br><br>
-            <input type="email" placeholder="E-Mail" size="30" required name="email"><br><br>
-            <input type="text" placeholder="Telefon" size="30" name="telefon"><br><br><br>
+            <input type="text" id="vorname" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" required><br><br>
+            <input type="text" id="nachname" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" required><br><br>
+            <input type="date" id="alter" placeholder="Alter" size="30" name="alter" required><br><br>
+            <input type="text" id="name_des_erziehungsberechtigten" placeholder="Name des Erziehungsberechtigten" size="30"  disabled><br><br>
+            <input type="email" id="email" placeholder="E-Mail" size="30" required name="email"><br><br>
+            <input type="tel" id="telefon" placeholder="Telefon" size="30" name="telefon"><br><br><br>
         </fieldset>
         <fieldset>
             <legend>Vorkenntnisse</legend>
