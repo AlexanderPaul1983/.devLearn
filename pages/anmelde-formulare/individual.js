@@ -85,7 +85,8 @@ function isStundeInList(inputValue) {
 
 function sendMail(){
     let params = 
-        {vorname: document.getElementById('vorname').value,
+        {
+        vorname: document.getElementById('vorname').value,
         nachname: document.getElementById('nachname').value,
         alter: document.getElementById('alter').value,
         name_des_erziehungsberechtigten: document.getElementById('name_des_erziehungsberechtigten').value,
@@ -97,12 +98,36 @@ function sendMail(){
         java: document.getElementById('java').value,
         andere_vorkenntnisse: document.getElementById('andere_vorkenntnisse').value,
         anfaenger: document.getElementById('anfaenger').value,
-        fortgeschritter_anfaenger: document.getElementById('fortgeschritter_anfaenger').value,
+        fortgeschrittener_anfaenger: document.getElementById('fortgeschrittener_anfaenger').value,
         mittelstufe: document.getElementById('mittelstuffe').value,
         fortgeschritten: document.getElementById('fortgeschritten').value,
         days: days,
-        stundenListe: stundenList};
+        stundenListe: stundenList
+        };
 
-    emailjs.send()
+        Email.send({
+            // c49695d0-7ea7-4fa9-894c-b0206d156278
+              Host : "smtp.elasticemail.com",
+              Username : "alexanderpaulrosenheim@gmail.com",
+              Password : "F477E12F4F3899712063FBFC6BCE786DD048",
+              To : 'alexanderpaulrosenheim@gmail.com',
+              From : "alexanderpaulrosenheim@gmail.com",
+              Subject : "Anfrage für Individualunterricht",
+              Body : "Persönliche Daten: /n" + "Name: " +  params.vorname + " " + params.nachname + "/n" 
+                + "Alter: " + params.alter + "/n"
+                + "Name des Erziehungsberechtigten: " + params.name_des_erziehungsberechtigten + "/n"
+                + "Email-Addresse: " + params.email + "/n"
+                + "Telefon: " + params.telefon + "/n"
+                + "Augewählte Vorkenntnisse: " + "HTML: " + params.html + " CSS: "
+                + params.css + " Javascript: " + params.javascript + " Java: " + params.java + "/n"
+                + "Andere Vorkenntnisse: " + params.andere_vorkenntnisse + "/n"
+                + "Persönliche Einschätzung:  Anfänger " + params.anfaenger + " Fortgeschrittener-Anfänger " + " Mittelstuffe "
+                + params.mittelstufe + " Fortgeschritten " + params.fortgeschritten + "/n"
+                + "Gewünschte Unterrichtstage: " + params.days + "/n"
+                + "Stunden: " + params.stundenListe,
+          }).then(
+            message => alert(message)
+          );
 }
+
 
