@@ -83,7 +83,7 @@ function isStundeInList(inputValue) {
     return false;
 }
 
-function sendMail(){
+function sendAnfrage(){
     let params = 
         {
         vorname: document.getElementById('vorname').value,
@@ -92,11 +92,6 @@ function sendMail(){
         name_des_erziehungsberechtigten: document.getElementById('name_des_erziehungsberechtigten').value,
         email: document.getElementById('email').value,
         telefon: document.getElementById('telefon').value,
-        html: document.getElementById('html').value,
-        css: document.getElementById('css').value,
-        javascript: document.getElementById('javascript').value,
-        java: document.getElementById('java').value,
-       
         };
 
 

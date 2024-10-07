@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="individual.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="individual.css">
+    <script src="individual.js" defer></script>
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7LW7uSTv5BGRk7boO",
+      });
+   })();
+</script>
+    <title>Anfrage</title>
 </head>
 <body>
-    <h1>Anmelde-Formular zur Programmier-Nachhilfe (Individualer Kurs)</h1>
-    <form>
-        <fieldset>
-            <legend>Allgemeine Informationen</legend>
-            <input type="text" id="vorname" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" autocomplete="on" required><br><br>
-            <input type="text" id="nachname" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" autocomplete="on" required><br><br>
-            <input type="date" id="alter" placeholder="Alter" size="30" name="alter" autocomplete="on" required><br><br>
-            <input type="text" id="name_des_erziehungsberechtigten" placeholder="Name des Erziehungsberechtigten" size="30"  disabled><br><br>
-            <input type="email" id="email" placeholder="E-Mail" size="30" autocomplete="on" required name="email"><br><br>
-            <input type="tel" id="telefon" placeholder="Telefon" size="30" autocomplete="on" name="telefon"><br><br><br>
-        </fieldset>
-        <fieldset>
-            <legend>Vorkenntnisse</legend>
-            <label>HTML</label>
-            <input type="checkbox" name="html" id="html">
-            <label>CSS</label>
-            <input type="checkbox" name="css" id="css">
-            <label>JAVASCRIPT</label>
-            <input type="checkbox" name="javascript" id="javascript">
-            <label>JAVA</label>
-            <input type="checkbox" name="java" id="java"><br><br>
-            <input type="text" name="andere" id="andere_vorkenntnisse" placeholder="Andere (bitte angeben)"><br><br>
-        </fieldset>
-        <fieldset>
-            <legend>Mein Programmierlevel</legend>
-            <label>Anfänger</label>
-            <input type="checkbox" name="anfaenger" id="anfaenger"><br>
-            <label>Fortgeschrittener Anfänger</label>
-            <input type="checkbox" name="fort" id="fortgeschrittener_anfaenger"><br>
-            <label>Mittelstufe</label>
-            <input type="checkbox" name="mittel" id="mittelstufe"><br>
-            <label>Fortgeschritten</label>
-            <input type="checkbox" name="fortgeschritten" id="fortgeschritten"><br>
-        </fieldset>
-        <fieldset>
-            <legend>Unterrichtsorganisation</legend>
-            <label>Wie oft wünschen Sie sich Nachhilfestunden pro Woche?</label><br>
-            <input type="number" name="sequenz" id="sequenze" min="1" required><br><br><br>
-            <label>Bevorzugte Tage für den Unterricht</label><br>
-            <input list="browsers" name="browser" id="dayInput"><br>
-            <datalist id="browsers">
-              <option value="Montag">
-              <option value="Dienstag">
-              <option value="Mittwoch">
-              <option value="Donnerstag">
-              <option value="Freitag">
-              <option value="Samstag">
-            </datalist><br> 
-            <input type="submit" value="Add" class="add_btn" id="addButton"><br><br>
-            <ul id="dayList"></ul>            
-            <label>Bevorzugte Stunden für den Unterricht</label><br>
-            <input list="stunden" name="stunden" id="stundenInput"><br>
-            <datalist id="stunden">
-              <option value="Zwischen 9:00 und 12:00 Uhr">
-              <option value="Zwischen 12:00 und 15:00 Uhr">
-              <option value="Zwischen 15:00 und 18:00 Uhr">
-            </datalist><br>
-            <input type="submit" value="Add" class="add_btn" id="addStunden">
-            <ul id="stundenList"></ul>
-        </fieldset><br><br>
-        <button type="submit" onclick="sendMail()" class="anfrage_senden_btn">Senden</button>
-    </form>
-    <h2>Wie geht´s weiter?</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, corporis et asperiores deserunt beatae id, nihil magnam, ipsum est iusto eius accusamus iste aliquam! Doloribus incidunt deleniti dolores nam sed.</p><br><br><br>
     
+    
+    <div>
+        <h1>Anfrage senden</h1>
+    
+            <label for="vorname">Vorname:</label><br>
+            <input type="text" id="vorname" name="vorname" required><br><br>
+    
+            <label for="nachname">Nachname:</label><br>
+            <input type="text" id="nachname" name="nachname" required><br><br>
 
-    <script src="individual.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+            <label for="alter">Alter:</label><br>
+            <input type="text" id="alter" name="alter" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="name_des_erziehungsberechtigten">Sind Sie Anfänger, Erfahren oder Profi?</label><br>
+            <input type="text" id="name_des_erziehungsberechtigten" name="name_des_erziehungsberechtigten" required><br><br>
+
+            <label for="telefon">Telefon:</label><br>
+            <input type="text" id="telefon" name="telefon"><br><br>
+    
+            
+    
+            <button onclick="sendAnfrage()">Senden</button>
+    
+    </div>
+
+
+
+ 
+    
 </body>
 </html>
