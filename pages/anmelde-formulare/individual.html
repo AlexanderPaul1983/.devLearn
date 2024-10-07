@@ -7,45 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Anmelde-Formular zur Programmier-Nachhilfe (individual Kurs)</h1>
+    <h1>Anmelde-Formular zur Programmier-Nachhilfe (Individualer Kurs)</h1>
     <form>
         <fieldset>
             <legend>Allgemeine Informationen</legend>
-            <input type="text" id="vorname" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" required><br><br>
-            <input type="text" id="nachname" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" required><br><br>
-            <input type="date" id="alter" placeholder="Alter" size="30" name="alter" required><br><br>
+            <input type="text" id="vorname" placeholder="Vorname des Schülers/der Schülerin" size="30" name="vorname" autocomplete="on" required><br><br>
+            <input type="text" id="nachname" placeholder="Nachname des Schülers/der Schülerin" size="30" name="nachname" autocomplete="on" required><br><br>
+            <input type="date" id="alter" placeholder="Alter" size="30" name="alter" autocomplete="on" required><br><br>
             <input type="text" id="name_des_erziehungsberechtigten" placeholder="Name des Erziehungsberechtigten" size="30"  disabled><br><br>
-            <input type="email" id="email" placeholder="E-Mail" size="30" required name="email"><br><br>
-            <input type="tel" id="telefon" placeholder="Telefon" size="30" name="telefon"><br><br><br>
+            <input type="email" id="email" placeholder="E-Mail" size="30" autocomplete="on" required name="email"><br><br>
+            <input type="tel" id="telefon" placeholder="Telefon" size="30" autocomplete="on" name="telefon"><br><br><br>
         </fieldset>
         <fieldset>
             <legend>Vorkenntnisse</legend>
-            <label for="html">HTML</label>
+            <label>HTML</label>
             <input type="checkbox" name="html" id="html">
-            <label for="css">CSS</label>
+            <label>CSS</label>
             <input type="checkbox" name="css" id="css">
-            <label for="javascript">JAVASCRIPT</label>
+            <label>JAVASCRIPT</label>
             <input type="checkbox" name="javascript" id="javascript">
-            <label for="java">JAVA</label>
+            <label>JAVA</label>
             <input type="checkbox" name="java" id="java"><br><br>
             <input type="text" name="andere" id="andere_vorkenntnisse" placeholder="Andere (bitte angeben)"><br><br>
         </fieldset>
         <fieldset>
             <legend>Mein Programmierlevel</legend>
-            <label for="anfaenger">Anfänger</label>
+            <label>Anfänger</label>
             <input type="checkbox" name="anfaenger" id="anfaenger"><br>
-            <label for="fort">Fortgeschrittener Anfänger</label>
+            <label>Fortgeschrittener Anfänger</label>
             <input type="checkbox" name="fort" id="fortgeschrittener_anfaenger"><br>
-            <label for="Mittelstufe">Mittelstufe</label>
+            <label>Mittelstufe</label>
             <input type="checkbox" name="mittel" id="mittelstufe"><br>
-            <label for="fortgeschritten">Fortgeschritten</label>
+            <label>Fortgeschritten</label>
             <input type="checkbox" name="fortgeschritten" id="fortgeschritten"><br>
         </fieldset>
         <fieldset>
             <legend>Unterrichtsorganisation</legend>
-            <label for="sequenz">Wie oft wünschen Sie sich Nachhilfestunden pro Woche?</label><br>
+            <label>Wie oft wünschen Sie sich Nachhilfestunden pro Woche?</label><br>
             <input type="number" name="sequenz" id="sequenze" min="1" required><br><br><br>
-            <label for="browsers">Bevorzugte Tage für den Unterricht</label><br>
+            <label>Bevorzugte Tage für den Unterricht</label><br>
             <input list="browsers" name="browser" id="dayInput"><br>
             <datalist id="browsers">
               <option value="Montag">
@@ -57,7 +57,7 @@
             </datalist><br> 
             <input type="submit" value="Add" class="add_btn" id="addButton"><br><br>
             <ul id="dayList"></ul>            
-            <label for="stunden">Bevorzugte Stunden für den Unterricht</label><br>
+            <label>Bevorzugte Stunden für den Unterricht</label><br>
             <input list="stunden" name="stunden" id="stundenInput"><br>
             <datalist id="stunden">
               <option value="Zwischen 9:00 und 12:00 Uhr">
