@@ -45,7 +45,7 @@ h1{
 .main-div{
     display: flex;
     flex-direction: row;
-    background-image: url('/images/computers.webp');
+    background-image: url('/images/school.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -156,6 +156,53 @@ header{
     margin: 10px;
     }
 }
+@media(min-width:875px) {
+    .bewertungen_content{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        padding: 10px;
+        font-size: small;
+        border: 2px solid black;
+    }
+    .main-div{
+        height: 650px;
+        margin-bottom: 200px;
+    }
+    .bewertungen-div{
+        margin-bottom: 200px;
+    }
+    .infos{
+        margin: 20px;
+    }
+    .img{
+        border: 2px solid;
+    height: 100px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    margin: 10px;
+    }
+    .link{
+        text-decoration: none;
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px 50px 8px 50px;
+        border-radius: 0px 0px 10px 0px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 16px;
+        color: rgb(250, 249, 249);
+        background-color: rgb(177, 57, 175);
+        cursor: pointer;
+        transition: transform 400ms ease-in;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0px 20px 50px 0px;
+    }
+}
 @media(max-width:540px) {
     .bewertungen_content{
         display: flex;
@@ -222,7 +269,8 @@ header{
 .infos_p{
     font-family: "Rubik", sans-serif;
     color: rgba(0, 0, 0, 0.70);
-    padding: 60px;
+    padding: 40px;
+    margin-bottom: 100px;
 }
 @media (max-width: 768px) {
     .infos_p{
