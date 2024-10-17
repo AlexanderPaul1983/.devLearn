@@ -21,18 +21,26 @@ app.use(express.static(path.join(__dirname, 'pages')));
 const serviceId = "service_jzctxt8";
 const templateId = "template_0664mfm";
 
+//Individuals logdaten
+const serviceId_individual = "service_0w07j7i";
+const templateId_individual = "template_ey8n74s";
+
 // Passwort als JSON über die /pass-Endpunkt senden
-app.get('/kontakt', function(req, res) {
+app.get('/kontakt', function (req, res) {
   res.json({ serviceId, templateId });
 });
 
+app.get('/anmelde-formulare', function (req, res) {
+  res.json({serviceId_individual, templateId_individual});
+});
+
 // Startseite bedienen
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'pages/home', 'index.html'));
 });
 
 
-app.listen(4444, function(err) {
+app.listen(4444, function (err) {
   if (err) {
     return console.log(err);
   }
