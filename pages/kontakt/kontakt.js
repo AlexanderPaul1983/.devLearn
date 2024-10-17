@@ -12,7 +12,7 @@ function sendMail(serviceId, templateId){
    serviceId = data.serviceId;
    templateId = data.templateId;
 });
-
+// he
 let serviceId;
 let templateId;
      
