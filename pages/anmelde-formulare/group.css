@@ -2,18 +2,20 @@ h1{
     color: rgb(246, 245, 247);
 }
 body{
+    margin: 0%;
+    height: 800px;
     background: rgb(3, 3, 3);
     background: linear-gradient(120deg, rgb(49, 3, 82) 55%, rgb(19, 35, 175) 94%);
     font-family: "Rubik", sans-serif;
 }
 legend{
     color: rgb(245, 246, 248);
-    font-size: 25px;
+    font-size: 10px;
 }
 input{
     background-color: rgb(192, 191, 191);
-    border-radius: 8px;
-    color: antiquewhite;
+    border-radius: 4px;
+    color: rgb(8, 8, 8);
     font-size: large;
     padding: 4px;
 }
@@ -42,6 +44,7 @@ label{
     cursor: pointer;
     color: black;
     margin-left: 30px;
+    margin-bottom: 60px;
 }
 .anfrage_senden_btn:hover{
     background-color: rgb(7, 7, 7);
@@ -49,4 +52,10 @@ label{
 }
 p, h2{
     color: antiquewhite;
+}
+.anfrage_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
