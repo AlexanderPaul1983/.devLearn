@@ -24,6 +24,7 @@ const templateId = "template_0664mfm";
 //Individuals logdaten
 const serviceId_individual = "service_0w07j7i";
 const templateId_individual = "template_ey8n74s";
+const templateId_group = "template_gimxpxp"; 
 
 // Passwort als JSON über die /pass-Endpunkt senden
 app.get('/kontakt', function (req, res) {
@@ -31,7 +32,7 @@ app.get('/kontakt', function (req, res) {
 });
 
 app.get('/anmelde-formulare', function (req, res) {
-  res.json({serviceId_individual, templateId_individual});
+  res.json({serviceId_individual, templateId_individual, templateId_group});
 });
 
 // Startseite bedienen

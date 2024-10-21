@@ -7,7 +7,7 @@ function sendAnfrage() {
         .then(response => response.json())
         .then(data => {
             const serviceId = data.serviceId_individual;
-            const templateId = data.templateId_individual;
+            const templateId = data.templateId_group;
 
             let params =
             {
