@@ -1,55 +1,58 @@
-body{
+body {
     margin: 0px;
     background-color: rgba(255, 255, 255, 0.8);
-    
+
 }
 
-.div-oben{
+.div-oben {
     width: 100%;
     height: 170px;
     display: flex;
     justify-content: space-evenly;
-    
+
 }
-.welcome_div{
+
+.welcome_div {
     display: flex;
     align-items: center;
     width: 100%;
     margin-left: 40px;
 }
 
-.login_div{
+.login_div {
     display: flex;
     justify-content: end;
     width: 100%;
     margin: 20px;
 }
 
-.log_in{
+.log_in {
     margin: 10px;
     text-decoration: none;
     color: black;
     font-size: larger;
     font-family: "Rubik", sans-serif;
-    
+
 }
-.log_in:hover{
+
+.log_in:hover {
     text-decoration: underline;
     color: rgb(177, 57, 175);
 }
 
-h1{
+h1 {
     font-family: "Rubik", sans-serif;
 }
 
-.main-div{
+.main-div {
     display: flex;
     flex-direction: row;
     background-image: url('/images/school.jpg');
     background-size: cover;
     background-position: center;
 }
-.link{
+
+.link {
     text-decoration: none;
     border: 1px solid black;
     text-align: center;
@@ -66,51 +69,46 @@ h1{
     transition: transform 400ms ease-in;
 }
 
-.link:hover{
+.link:hover {
     background-color: rgb(0, 0, 0);
     box-shadow: 2px 2px, white;
     color: rgb(250, 250, 250);
     transform: scale(1.1);
 }
 
-.main-container{
+.main-container {
     width: 100%;
     min-height: 220px;
     display: flex;
     justify-content: end;
-    
+
 }
-.bewertungen_p{
+
+.bewertungen_p {
     font-size: large;
     font-family: "Rubik", sans-serif;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     border-radius: 0px 20px 50px 0px;
 }
-.bewertungen-div{
+
+.bewertungen-div {
     width: 100%;
     display: flex;
     margin-top: 40px;
     justify-content: space-around;
 }
-.bewertungen_content{
+
+.bewertungen_content {
     display: flex;
 }
 
-.img_bewertung{
-    border: 2px solid;
-    height: 75px;
-    width: 40%;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 10px;
-}
 @media(max-width:668px) {
-    .bewertungen_content{
+    .bewertungen_content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -119,17 +117,19 @@ header{
         font-size: small;
         border: 1px solid black;
     }
-    .img_bewertung{
+
+    .img_bewertung {
         border: 2px solid;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px;
+        margin: 10px;
     }
 }
+
 @media(max-width:875px) {
-    .bewertungen_content{
+    .bewertungen_content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -138,24 +138,28 @@ header{
         font-size: small;
         border: 1px solid black;
     }
-    .img_bewertung{
+
+    .img_bewertung {
         border: 2px solid;
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 10px;
+        height: 75px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 2px 2px;
+        margin: 10px;
     }
-    .logo{
+
+    .logo {
         width: 40px;
     }
-    h1{
+
+    h1 {
         font-size: small;
     }
-    
+
 }
+
 @media(min-width:875px) {
-    .bewertungen_content{
+    .bewertungen_content {
         display: flex;
         flex-direction: row;
         margin: 10px;
@@ -163,31 +167,38 @@ header{
         font-size: small;
         border: 2px solid black;
     }
-    .logo{
+
+    .logo {
         width: 40px;
     }
-    h1{
+
+    h1 {
         font-size: small;
     }
-    .main-div{
+
+    .main-div {
         height: 720px;
         margin-bottom: 200px;
     }
-    .bewertungen-div{
+
+    .bewertungen-div {
         margin-bottom: 200px;
     }
-    .infos{
+
+    .infos {
         margin: 20px;
     }
-    .img_bewertung{
+
+    .img_bewertung {
         border: 2px solid;
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 10px;
+        height: 80px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 2px 2px;
+        margin: 10px;
     }
-    .link{
+
+    .link {
         text-decoration: none;
         border: 1px solid black;
         text-align: center;
@@ -200,15 +211,17 @@ header{
         cursor: pointer;
         transition: transform 400ms ease-in;
     }
-    header{
+
+    header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-radius: 0px 20px 50px 0px;
     }
 }
+
 @media(max-width:540px) {
-    .bewertungen_content{
+    .bewertungen_content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -217,15 +230,17 @@ header{
         font-size: small;
         border: 1px solid black;
     }
-    .img_bewertung{
+
+    .img_bewertung {
         border: 2px solid;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 2px;
-    margin: 10px;
+        height: 50px;
+        width: 70px;
+        border-radius: 10px;
+        box-shadow: 2px 2px;
+        margin: 10px;
     }
-    .footer_on_main{
+
+    .footer_on_main {
         width: 100%;
         background-color: rgb(30, 28, 28);
         display: flex;
@@ -233,21 +248,23 @@ header{
         padding: 18px;
         height: 100%;
     }
-    .footer-div{
+
+    .footer-div {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         font-size: small;
-        }
-        .datenschutz_div{
-            background-color: rgb(30, 28, 28);
-            width: 100%;
-        }
-   
+    }
+
+    .datenschutz_div {
+        background-color: rgb(30, 28, 28);
+        width: 100%;
+    }
+
 }
 
-.infos{
+.infos {
     margin: 40px;
     font-family: "Rubik", sans-serif;
     line-height: 30px;
@@ -255,7 +272,8 @@ header{
     flex-direction: column;
     align-items: center;
 }
-.footer_on_main{
+
+.footer_on_main {
     width: 100%;
     background-color: rgb(30, 28, 28);
     display: flex;
@@ -263,69 +281,83 @@ header{
     padding: 18px;
 
 }
-.datenschutz_div{
+
+.datenschutz_div {
     display: flex;
     justify-content: space-around;
     width: 100%;
 
 }
-.infos_p{
+
+.infos_p {
     font-family: "Rubik", sans-serif;
     color: rgba(0, 0, 0, 0.80);
     padding: 40px;
     margin-bottom: 100px;
 }
+
 @media (max-width: 768px) {
-    .infos_p{
+    .infos_p {
         padding: 10px;
         font-size: x-small;
     }
-    h1{
+
+    h1 {
         font-size: medium;
     }
-    .logo{
+
+    .logo {
         width: 45px;
     }
-    .log_in{
+
+    .log_in {
         font-size: small;
     }
-    .footer-div{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: small;
+
+    .footer-div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: small;
     }
-    
+
 }
-.footer-div{
+
+.footer-div {
     width: 100%;
     display: flex;
-    
+
     justify-content: center;
     font-size: small;
 }
-.agb{
+
+.agb {
     color: azure;
 }
-.AGB{
+
+.AGB {
     margin-top: 15px;
     align-content: flex-end;
 }
-.kontakt{
+
+.kontakt {
     color: hsl(208, 100%, 97%);
     line-height: 0.8rem;
     width: 380px;
     margin-left: 10px;
 }
-.p_kontakt{
+
+.p_kontakt {
     font-style: italic;
 }
-.img_on_footer{
+
+.img_on_footer {
     cursor: pointer;
     border-radius: 20px;
     margin-right: 20px;
 }
-#agb{
+
+#agb {
     align-content: flex-end;
 }
