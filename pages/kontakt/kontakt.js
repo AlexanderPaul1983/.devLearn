@@ -14,7 +14,7 @@ function sendMail() {
                 email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             };
-            // hahah
+            
 
             return emailjs.send(serviceId, templateId, params);
         })

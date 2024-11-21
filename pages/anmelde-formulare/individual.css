@@ -5,7 +5,7 @@ body{
     margin: 0%;
     height: 800px;
     background: rgb(3, 3, 3);
-    background: linear-gradient(120deg, rgb(49, 3, 82) 55%, rgb(19, 35, 175) 94%);
+    background: linear-gradient(120deg, rgb(208, 232, 70) 55%, rgb(62, 4, 103) 94%);
     font-family: "Rubik", sans-serif;
 }
 legend{
