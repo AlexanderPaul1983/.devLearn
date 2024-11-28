@@ -1,13 +1,11 @@
 
 
-// const serviceId = "service_jzctxt8";
-// const templateId = "template_0664mfm"; 
 
 import express from "express";
 import path from "path";
 import { fileURLToPath } from 'url';
 
-// Den aktuellen Dateipfad ermitteln
+
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
@@ -15,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 var app = express();
 
-// Statische Dateien im "public"-Verzeichnis bereitstellen
+
 app.use(express.static(path.join(__dirname, 'pages')));
 
 const serviceId = "service_jzctxt8";
