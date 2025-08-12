@@ -53,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const result = await response.json();
             
             if (result.success) {
-                alert('Ihre Anfrage wurde erfolgreich gesendet!');
-                form.reset();
-                // Weiterleitung zur Dankeseite
+                // Direkt zur Dankeseite weiterleiten ohne Popup
                 window.location.href = 'https://devlearn-x3g0.onrender.com/thank-you.html';
             } else {
                 alert('Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut.');
