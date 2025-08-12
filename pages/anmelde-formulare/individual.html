@@ -15,23 +15,35 @@
         <h2>Anfrage senden</h2>
         
         <form id="individualForm">
-            <label for="vorname">Vorname:</label>
-            <input type="text" id="vorname" name="vorname" required autocomplete="given-name"><br>
+            <div class="form-group">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" required autocomplete="given-name" placeholder="Ihr Vorname">
+            </div>
     
-            <label for="nachname">Nachname:</label>
-            <input type="text" id="nachname" name="nachname" required autocomplete="family-name"><br>
+            <div class="form-group">
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" required autocomplete="family-name" placeholder="Ihr Nachname">
+            </div>
 
-            <label for="alter">Alter:</label>
-            <input type="text" id="alter" name="alter" required><br>
+            <div class="form-group">
+                <label for="alter">Alter:</label>
+                <input type="number" id="alter" name="alter" required placeholder="Ihr Alter" min="1" max="120">
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required autocomplete="email"><br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="ihre.email@beispiel.de">
+            </div>
 
-            <label for="level">Sind Sie Anfänger, Erfahren oder Profi?</label>
-            <input type="text" id="level" name="level" required><br>
+            <div class="form-group">
+                <label for="level">Sind Sie Anfänger, Erfahren oder Profi?</label>
+                <input type="text" id="level" name="level" required placeholder="Anfänger / Erfahren / Profi">
+            </div>
 
-            <label for="telefon">Telefon:</label>
-            <input type="text" id="telefon" name="telefon" autocomplete="tel"><br>
+            <div class="form-group">
+                <label for="telefon">Telefon (optional):</label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Ihre Telefonnummer">
+            </div>
             
             <input type="hidden" name="form_type" value="individual">
     

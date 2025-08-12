@@ -1,54 +1,117 @@
-h2{
+h2 {
     color: rgba(5, 5, 5, 0.746);
-}
-body{
-    margin: 0%;
-    height: 100%;
-    background-color: rgb(224, 226, 227);
-    font-family: "Rubik", sans-serif;
-}
-input{
-    background-color: rgb(192, 191, 191);
-    border-radius: 10px;
-    color: rgb(248, 248, 248);
-    font-size: medium;
-    padding: 0.3%;
-    width: 20%;
-}
-@media (max-width: 1068px) {
-    input{
-        width: 40%;
-    }
-    label{
-        font-size: small;
-    }
-    h1{
-        font-size: medium;
-    }
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
-label{
-    color: rgb(72, 72, 72);
-}
-    
-.anfrage_senden_btn{
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     font-family: "Rubik", sans-serif;
-    font-size: larger;
-    padding: 0.4% 1%;
-    border-radius: 10px;
-    cursor: pointer;
-    color: black;
-    margin-bottom: 10%;
-}
-.anfrage_senden_btn:hover{
-    background-color: rgba(7, 7, 7, 0.717);
-    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.anfrage_div{
+.anfrage_div {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    margin-top: 3%;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: rgb(72, 72, 72);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    color: #495057;
+    font-size: 1rem;
+    padding: 12px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: "Rubik", sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+.anfrage_senden_btn {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.anfrage_senden_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.anfrage_senden_btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .anfrage_div {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    input {
+        padding: 10px 14px;
+        font-size: 16px; /* Verhindert Zoom auf iOS */
+    }
+    
+    .anfrage_senden_btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
 }
