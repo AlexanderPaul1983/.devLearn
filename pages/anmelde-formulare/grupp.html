@@ -7,22 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-  emailjs.init({
-    publicKey: "7LW7uSTv5BGRk7boO",
-  });
-})();
-</script>
     <title>dotDivLearn</title>
 </head>
 <body>
     <div class="anfrage_div">
         <h2>Anfrage senden</h2>
-    
+        
+        <form id="groupForm">
             <label for="vorname">Vorname</label>
             <input type="text" id="vorname" name="vorname" required autocomplete="given-name"><br>
     
@@ -42,15 +33,16 @@
             <input type="text" id="telefon" name="telefon" autocomplete="tel"><br>
 
             <label for="days">Beforzugte Tage</label>
-            <input type="days" id="days" name="days"><br>
+            <input type="text" id="days" name="days"><br>
 
             <label for="time">Beforzugte Zeiten</label>
             <input type="text" id="time" name="time"><br>
-    
             
+            <input type="hidden" name="form_type" value="group">
     
-            <button onclick="sendAnfrage()" class="anfrage_senden_btn">Senden</button>
-    
+            <button type="submit" class="anfrage_senden_btn">Senden</button>
+        </form>
+    </div>
 
     <script src="group.js"></script>
 </body>

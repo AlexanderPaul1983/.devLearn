@@ -1,33 +1,75 @@
-
-
-
-function sendAnfrage() {
-
-    fetch("/anmelde-formulare")
-        .then(response => response.json())
-        .then(data => {
-            const serviceId = data.serviceId_individual;
-            const templateId = data.templateId_individual;
-
-            let params =
-            {
-                vorname: document.getElementById('vorname').value,
-                nachname: document.getElementById('nachname').value,
-                alter: document.getElementById('alter').value,
-                name_des_erziehungsberechtigten: document.getElementById('name_des_erziehungsberechtigten').value,
-                email: document.getElementById('email').value,
-                telefon: document.getElementById('telefon').value,
-            };
-
-            return emailjs.send(serviceId, templateId, params);
-        })
-        .then(function (res) {
-            alert("Gesendet");
-        })
-        .catch(function (error) {
-            console.error("Fehler beim Senden der Nachricht:", error);
-            alert("Fehler beim Senden der Nachricht.");
-        });
-}
+// Formular-Handler für individuelle Anfragen
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('individualForm');
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Formulardaten sammeln
+        const formData = {
+            vorname: document.getElementById('vorname').value.trim(),
+            nachname: document.getElementById('nachname').value.trim(),
+            alter: document.getElementById('alter').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            level: document.getElementById('level').value.trim(),
+            telefon: document.getElementById('telefon').value.trim()
+        };
+        
+        // Validierung
+        if (!formData.vorname || !formData.nachname || !formData.alter || !formData.email || !formData.level) {
+            alert('Bitte füllen Sie alle Pflichtfelder aus.');
+            return;
+        }
+        
+        // Alter validieren
+        const alterNum = parseInt(formData.alter);
+        if (isNaN(alterNum) || alterNum < 1 || alterNum > 120) {
+            alert('Bitte geben Sie ein gültiges Alter ein.');
+            return;
+        }
+        
+        // Email validieren
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+            return;
+        }
+        
+        try {
+            // Senden-Button deaktivieren
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Wird gesendet...';
+            
+            // Formular an Server senden (über Live-Website)
+            const response = await fetch('https://devlearn-x3g0.onrender.com/send-individual', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('Ihre Anfrage wurde erfolgreich gesendet!');
+                form.reset();
+                // Weiterleitung zur Dankeseite
+                window.location.href = 'https://devlearn-x3g0.onrender.com/thank-you.html';
+            } else {
+                alert('Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut.');
+            }
+        } catch (error) {
+            console.error('Fehler:', error);
+            alert('Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut.');
+        } finally {
+            // Senden-Button wieder aktivieren
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Senden';
+        }
+    });
+});
 
 

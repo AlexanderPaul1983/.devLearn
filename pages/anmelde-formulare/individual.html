@@ -8,25 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script src="individual.js" defer></script>
-    
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "7LW7uSTv5BGRk7boO",
-      });
-   })();
-</script>
     <title>Anfrage</title>
 </head>
 <body>
-
-    
     <div class="anfrage_div">
         <h2>Anfrage senden</h2>
-    
+        
+        <form id="individualForm">
             <label for="vorname">Vorname:</label>
             <input type="text" id="vorname" name="vorname" required autocomplete="given-name"><br>
     
@@ -39,21 +27,16 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required autocomplete="email"><br>
 
-            <label for="name_des_erziehungsberechtigten">Sind Sie Anfänger, Erfahren oder Profi?</label>
-            <input type="text" id="name_des_erziehungsberechtigten" name="name_des_erziehungsberechtigten" required><br>
+            <label for="level">Sind Sie Anfänger, Erfahren oder Profi?</label>
+            <input type="text" id="level" name="level" required><br>
 
             <label for="telefon">Telefon:</label>
             <input type="text" id="telefon" name="telefon" autocomplete="tel"><br>
-    
             
+            <input type="hidden" name="form_type" value="individual">
     
-            <button onclick="sendAnfrage()" class="anfrage_senden_btn">Senden</button>
-    
+            <button type="submit" class="anfrage_senden_btn">Senden</button>
+        </form>
     </div>
-
-
-
- 
-    
 </body>
 </html>
