@@ -5,6 +5,10 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from 'url';
 import { Resend } from 'resend';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,8 +20,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'pages')));
 
+// Validate required environment variables
+const requiredEnvVars = ['RESEND_API_KEY', 'ADMIN_EMAIL'];
+for (const envVar of requiredEnvVars) {
+    if (!process.env[envVar]) {
+        console.error(`❌ Missing required environment variable: ${envVar}`);
+        process.exit(1);
+    }
+}
+
 // Resend E-Mail-Service konfigurieren
-const resend = new Resend('re_DAjbDvzH_CPuuponaKBPUcdrYFm1MQmfy');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // E-Mail-Versendung für individuelle Anfragen
 app.post('/send-individual', async (req, res) => {
@@ -25,8 +38,8 @@ app.post('/send-individual', async (req, res) => {
         const { vorname, nachname, alter, email, level, telefon } = req.body;
         
         const { data, error } = await resend.emails.send({
-            from: 'dotDivLearn <onboarding@resend.dev>',
-            to: ['alexanderpaul@gmx.de'],
+            from: process.env.FROM_EMAIL || 'dotDivLearn <onboarding@resend.dev>',
+            to: [process.env.ADMIN_EMAIL],
             subject: 'Neue individuelle Anfrage - dotDivLearn',
             html: `
                 <h2>Neue individuelle Anfrage</h2>
@@ -58,8 +71,8 @@ app.post('/send-group', async (req, res) => {
         const { vorname, nachname, alter, email, level, telefon, days, time } = req.body;
         
         const { data, error } = await resend.emails.send({
-            from: 'dotDivLearn <onboarding@resend.dev>',
-            to: ['alexanderpaul@gmx.de'],
+            from: process.env.FROM_EMAIL || 'dotDivLearn <onboarding@resend.dev>',
+            to: [process.env.ADMIN_EMAIL],
             subject: 'Neue Gruppenanfrage - dotDivLearn',
             html: `
                 <h2>Neue Gruppenanfrage</h2>
@@ -92,11 +105,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'pages/home', 'index.html'));
 });
 
-app.listen(4444, function (err) {
+const PORT = process.env.PORT || 4444;
+
+app.listen(PORT, function (err) {
   if (err) {
     return console.log(err);
   }
-  console.log('App startet auf Port 4444');
-  console.log('E-Mail-Server bereit');
+  console.log('✅ App startet auf Port', PORT);
+  console.log('✅ E-Mail-Server bereit');
+  console.log('✅ Environment variables loaded');
 });
 

@@ -10,6 +10,7 @@
   "author": "Alexander Paul",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "express": "^4.21.1",
     "nodemailer": "^7.0.5",
     "nodemon": "^3.1.7",
