@@ -73,7 +73,7 @@ h1{
 @media (max-width: 800px) {
     body{
         font-family: "Rubik", sans-serif;
-        background-color: rgb(187, 220, 249);
+        background-color: rgb(233, 239, 245);
         font-size: medium;
         line-height: 160%; 
         .btn_on_kurse{
