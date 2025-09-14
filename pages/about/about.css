@@ -11,7 +11,7 @@ body{
 }
 
 .header_on_kurse{
-    background-color: aliceblue;
+    background-color: rgb(252, 252, 252);
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -72,20 +72,20 @@ h1{
     display: flex;
     flex-direction: row;
     width: 80%;
-    background-color: aliceblue;
+    background-color: rgb(252, 252, 252);
     padding: 10px;
 }
 @media (max-width: 800px) {
     body{
         font-family: "Rubik", sans-serif;
-        background-color: rgb(187, 220, 249);
+        background-color: rgb(239, 245, 250);
         font-size: medium;
         line-height: 160%; 
     }
     .main_container{
         display: flex;
         flex-direction: column;
-        background-color: aliceblue;
+        background-color: rgb(245, 249, 252);
         padding: 10px;
     }
 }
